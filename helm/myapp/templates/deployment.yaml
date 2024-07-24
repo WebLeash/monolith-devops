@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "myapp.fullname" . }}
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: {{ include "myapp.fullname" . }}
+  template:
+    metadata:
+      labels:
+        app: {{ include "myapp.fullname" . }}
+    spec:
+      containers:
+        - name: myapp
+          image: webleash/monolith:latest
+          ports:
+            - containerPort: 8080
