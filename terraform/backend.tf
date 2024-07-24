@@ -1,7 +1,7 @@
 
 terraform {
   backend "s3" {
-    bucket  = "eks-fargate-cluster-dev"
+    bucket  = "eks-cluster-dev"
     key     = "eks-cluster-mono/terraform.tfstate"
     region  = "eu-west-2"
     acl     = "private"
