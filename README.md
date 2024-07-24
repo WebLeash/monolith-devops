@@ -10,7 +10,7 @@
    docker build -t your_image_name .
 
 #### Run the Docker image.
-This will map you port on your server to the port exposed in Docker. The Docker conatiner will becalled myapp and will be removed automatically after termination
+This will map your port on your server to the port exposed in Docker. The Docker container will be called "myapp" and will be removed automatically after termination
    ```sh
    docker run --name myapp --rm -d -p 8080:8080 --name your_container_name your_image_name
 
@@ -83,7 +83,7 @@ helm install monolith ./myapp
 
 ```
 ## Step 4: Test the Application
-will install in default namespace.
+Will be installed in the default namespace.
 Use -n if in another namespace
 
 ```sh
@@ -192,7 +192,7 @@ Or pass values to the terraform command.
 terraform apply -var="name=yourname"
 
 ```
-Or with empty string.
+Or with an empty string.
 ```sh
 terraform apply -var="name="
 
@@ -265,16 +265,16 @@ terraform destroy
 
 # Scaling the Application to Handle 1000 Requests per Second
 
-To scale an application to handle 1000 requests per second, we need to ensure that our infrastructure, application design, and operational practices are optimized for high performance, reliability, and scalability. Here’s a high-level description of the approach, including specific tools and services that would be used:
+To scale an application to handle 1000 requests per second, we need to ensure that our infrastructure, application design, and operational practices are optimised for high performance, reliability, and scalability. Here’s a high-level description of the approach, including specific tools and services that would be used:
 
 ## Infrastructure
 
 ### Elastic Kubernetes Service (EKS)
-- **Auto-scaling**: Utilize Kubernetes Horizontal Pod Autoscaler (HPA) to automatically scale the number of pods based on CPU/memory usage or custom metrics.
+- **Auto-scaling**: Utilise Kubernetes Horizontal Pod Autoscaler (HPA) to automatically scale the number of pods based on CPU/memory usage or custom metrics.
 - **Cluster Autoscaler**: Integrate Kubernetes Cluster Autoscaler to automatically adjust the number of nodes in your cluster based on the pod resource requests.
 
 ### Amazon EC2
-- **Instance Types**: Use a mix of EC2 instance types (e.g., general-purpose, compute-optimized) to handle different workload requirements.
+- **Instance Types**: Use a mix of EC2 instance types (e.g., general-purpose, compute-optimised) to handle different workload requirements.
 - **Auto Scaling Groups**: Configure EC2 Auto Scaling Groups to ensure that the number of instances scales dynamically based on demand.
 
 ### Networking
@@ -291,7 +291,7 @@ To scale an application to handle 1000 requests per second, we need to ensure th
 - **In-memory Caching**: Use services like Amazon ElastiCache (Redis or Memcached) to cache frequently accessed data and reduce load on the database.
 - **Content Delivery Network (CDN)**: Use Amazon CloudFront to cache static assets and reduce latency for end-users.
 
-### Database Optimization
+### Database Optimisation
 - **Amazon RDS/Aurora**: Use managed relational databases with read replicas to handle read-heavy workloads.
 - **NoSQL Databases**: Consider using Amazon DynamoDB for highly scalable and low-latency data access patterns.
 - **Database Sharding**: Implement sharding to distribute database load across multiple instances.
@@ -300,7 +300,7 @@ To scale an application to handle 1000 requests per second, we need to ensure th
 
 ### Monitoring and Logging
 - **Amazon CloudWatch**: Use CloudWatch to monitor application metrics, set up alarms, and gain insights into application performance.
-- **Centralized Logging**: Use services like Amazon Elasticsearch Service (with Kibana) or Grafana Loki for centralized log management and analysis.
+- **Centralised Logging**: Use services like Amazon Elasticsearch Service (with Kibana) or Grafana Loki for centralised log management and analysis.
 
 ### CI/CD Pipeline
 - **Continuous Integration/Continuous Deployment**: Implement CI/CD pipelines using tools like Jenkins, GitLab CI, or AWS CodePipeline to automate testing and deployment processes.
@@ -335,4 +335,4 @@ To scale an application to handle 1000 requests per second, we need to ensure th
 
 ## Summary
 
-By leveraging AWS managed services and best practices for application architecture and operational excellence, we can build a scalable, resilient, and high-performance system capable of handling 1000 requests per second. This involves using EKS for container orchestration, implementing auto-scaling policies, optimizing database access, and ensuring robust monitoring and logging practices.
+By leveraging AWS managed services and best practices for application architecture and operational excellence, we can build a scalable, resilient, and high-performance system capable of handling 1000 requests per second. This involves using EKS for container orchestration, implementing auto-scaling policies, optimising database access, and ensuring robust monitoring and logging practices.
